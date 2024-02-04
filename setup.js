@@ -1,6 +1,11 @@
 (function() {
     'use strict';
 
-    // Votre code ici
-    alert('Bonjour, ceci est un message d\'alerte depuis le user script !');
+    // Fonction pour actualiser la page
+    function actualiserPage() {
+        location.reload();
+    }
+
+    // Actualiser la page toutes les 2 secondes
+    setInterval(actualiserPage, 1000);
 })();
