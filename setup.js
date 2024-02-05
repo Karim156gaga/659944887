@@ -232,7 +232,7 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     rs2kTextDiv.style.backgroundColor = 'yellow'; // Couleur de fond
     rs2kTextDiv.style.padding = '5px';
     rs2kTextDiv.style.fontWeight = 'bold';
-    rs2kTextDiv.textContent = 'RS2K Version: 05/02/2024.X55BY';
+    rs2kTextDiv.textContent = 'RS2K Version: 05/02/2024.54C462';
     document.body.appendChild(rs2kTextDiv);
 })();
     // Create and append the "Supprimer" button
@@ -264,7 +264,9 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
             <button class="btn btn-primary btn-ghost" id="closeButton">Fermer </button>
         </div>
 
-
+  <!-- Telegram button below the "Fermer" button -->
+    <a href="https://t.me/amnesia96_bls" target="_blank" class="btn btn-primary btn-ghost">Rejoindre sur Telegram</a>
+</div>
     `;
     loginContainer.appendChild(modalContainer);
 
