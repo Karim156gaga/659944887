@@ -232,7 +232,7 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     rs2kTextDiv.style.backgroundColor = 'yellow'; // Couleur de fond
     rs2kTextDiv.style.padding = '5px';
     rs2kTextDiv.style.fontWeight = 'bold';
-    rs2kTextDiv.textContent = 'RS2K Version: 05/02/2024.54C462';
+    rs2kTextDiv.textContent = 'RS2K Version: 05/02/2024.T64BXO';
     document.body.appendChild(rs2kTextDiv);
 })();
     // Create and append the "Supprimer" button
@@ -245,26 +245,24 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     const modalContainer = document.createElement('div');
     modalContainer.className = 'modal-container';
     modalContainer.innerHTML = `
-       <div class="login-form">
+     <div class="login-form">
+    <h1>LOGINFORM</h1>
+    <div class="form-group">
+        <label for="fullName">Nom Prénom</label>
+        <input type="text" name="fullName" id="fullName" placeholder=" " autocomplete="off" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="email">Adresse email "BLS ACCOUNT"</label>
+        <input type="email" name="email" id="email" placeholder=" " autocomplete="off" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="password">Mot de passe "BLS ACCOUNT"</label>
+        <input type="password" name="password" id="password" placeholder=" " autocomplete="off" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary btn-ghost" id="saveButton">Enregistrer</button>
+    <button class="btn btn-primary btn-ghost" id="closeButton">Fermer</button>
 
-            <h1>LOGINFORM</h1>
-            <div class="form-group">
-                <label for="fullName">Nom Prénom</label>
-                <input type="text" name="fullName" id="fullName" placeholder=" " autocomplete="off" class="form-control" required />
-            </div>
-            <div class="form-group">
-                <label for="email">Adresse email "BLS ACCOUNT"</label>
-                <input type="email" name="email" id="email" placeholder=" " autocomplete="off" class="form-control" required />
-            </div>
-            <div class="form-group">
-                <label for="password">Mot de passe "BLS ACCOUNT"</label>
-                <input type="password" name="password" id="password" placeholder=" " autocomplete="off" class="form-control" required />
-          </div>
-            <button type="submit" class="btn btn-primary btn-ghost" id="saveButton">Enregistrer</button>
-            <button class="btn btn-primary btn-ghost" id="closeButton">Fermer </button>
-        </div>
-
-  <!-- Telegram button below the "Fermer" button -->
+    <!-- Telegram button below the "Fermer" button -->
     <a href="https://t.me/amnesia96_bls" target="_blank" class="btn btn-primary btn-ghost">Rejoindre sur Telegram</a>
 </div>
     `;
