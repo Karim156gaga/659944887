@@ -232,7 +232,7 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     rs2kTextDiv.style.backgroundColor = 'yellow'; // Couleur de fond
     rs2kTextDiv.style.padding = '5px';
     rs2kTextDiv.style.fontWeight = 'bold';
-    rs2kTextDiv.textContent = 'RS2K Version: 06/02/2024.5231FJ';
+    rs2kTextDiv.textContent = 'RS2K Version: 06/02/2024.TB504';
     document.body.appendChild(rs2kTextDiv);
 })();
     // Create and append the "Supprimer" button
