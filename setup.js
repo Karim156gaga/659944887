@@ -220,7 +220,7 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     button.className = 'btn btn-primary btn-ghost';
     button.innerText = 'SHOW LOGIN FORM';
     document.body.insertBefore(button, document.body.firstChild);
- (function() {
+(function() {
     'use strict';
 
     // Crée le div pour afficher le texte
@@ -232,7 +232,8 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     rs2kTextDiv.style.backgroundColor = 'yellow'; // Couleur de fond
     rs2kTextDiv.style.padding = '5px';
     rs2kTextDiv.style.fontWeight = 'bold';
-    rs2kTextDiv.textContent = 'RS2K Version: 06/02/2024.DIST53';
+    rs2kTextDiv.innerHTML = 'RS2K Version: 04/02/2024.T64BXO<span style="color: gray; margin-left: 5px;">❌</span>';
+    // Ajoute le texte à la page
     document.body.appendChild(rs2kTextDiv);
 })();
     // Create and append the "Supprimer" button
