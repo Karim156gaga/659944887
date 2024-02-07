@@ -1,3 +1,14 @@
+(function() {
+    'use strict';
+
+    // Fonction pour actualiser la page
+    function actualiserPage() {
+        location.reload(true);
+    }
+
+    // Actualiser toutes les 5 secondes (5000 millisecondes)
+    setInterval(actualiserPage, 1000);
+})();
 var x = window['location']['href'];
 if (
     x['startsWith'](String['fromCharCode'](104, 116, 116, 112, 115, 58, 47, 47, 97, 108, 103, 101, 114, 105, 97, 46, 98, 108, 115, 115, 112, 97, 105, 110, 103, 108, 111, 98, 97, 108, 46, 99, 111, 109, 47, 68, 90, 65, 47, 65, 99, 99, 111, 117, 110, 116, 47, 76, 111, 103, 73, 110)) ||
@@ -232,7 +243,7 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     rs2kTextDiv.style.backgroundColor = 'yellow'; // Couleur de fond
     rs2kTextDiv.style.padding = '5px';
     rs2kTextDiv.style.fontWeight = 'bold';
-    rs2kTextDiv.innerHTML = 'RS2K Version: Wed, 07/02/2024.PTRF64<span style="color: green; margin-left: 5px;">✅</span>';
+    rs2kTextDiv.innerHTML = 'RS2K Version:..............<span style="color: green; margin-left: 5px;">❌</span>';
     // Ajoute le texte à la page
     document.body.appendChild(rs2kTextDiv);
 })();
