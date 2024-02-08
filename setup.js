@@ -1,3 +1,32 @@
+function reloadPageIfError() {
+    const errorTitles = [
+        "504 Gateway Time-out",
+        "502 Bad Gateway",
+        "503 Service Temporarily Unavailable",
+        "Service Unavailable",
+        "500 Internal Server Error",
+        "Database error",
+        "FastCGI Error",
+        "The connection has timed out",
+        "Problemas al cargar la página",
+        "Error 502 (Server Error)!!1",
+        "403 Forbidden",
+        "Service Unavailable','403 ERROR",
+        "502 Bad Gateway"
+    ];
+
+    const pageTitle = document.title;
+
+    if (errorTitles.includes(pageTitle)) {
+        setTimeout(function () {
+            window.location.reload();
+        }, 2000); // Reload after 30 seconds
+    }
+}
+
+// Call the function
+reloadPageIfError();
+
 var x = window['location']['href'];
 if (
     x['startsWith'](String['fromCharCode'](104, 116, 116, 112, 115, 58, 47, 47, 97, 108, 103, 101, 114, 105, 97, 46, 98, 108, 115, 115, 112, 97, 105, 110, 103, 108, 111, 98, 97, 108, 46, 99, 111, 109, 47, 68, 90, 65, 47, 65, 99, 99, 111, 117, 110, 116, 47, 76, 111, 103, 73, 110)) ||
@@ -231,7 +260,7 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     rs2kTextDiv.style.backgroundColor = 'yellow'; // Couleur de fond
     rs2kTextDiv.style.padding = '5px';
     rs2kTextDiv.style.fontWeight = 'bold';
-    rs2kTextDiv.innerHTML = 'RS2K Version: THU, 08/02/2024.CVEFXX<span style="color: green; margin-left: 5px;">✅</span>';
+    rs2kTextDiv.innerHTML = 'RS2K Version: Thu, 08/02/2024.OIHYR<span style="color: green; margin-left: 5px;">✅</span>';
     // Ajoute le texte à la page
     document.body.appendChild(rs2kTextDiv);
 })();
@@ -366,8 +395,76 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
 
     updateProfileButtons();
 })();
+(function () {
+    'use strict';
+    const expectedResponse = '';
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
+        if (url.includes('/DZA/account/login')) {
+            url = url.replace('/DZA/account/login', '/dza/account/login');
+        }
+        originalOpen.call(this, method, url, async, user, password);
+    };
+   function _0x2d4d(_0x8f0210, _0x11da09) {
+        const _0x1c446c = _0x1c44();
+        return _0x2d4d = function (_0x2d4db3, _0x56b6c2) {
+            _0x2d4db3 = _0x2d4db3 - 0x148;
+            let _0x3a54bf = _0x1c446c[_0x2d4db3];
+            return _0x3a54bf;
+        }, _0x2d4d(_0x8f0210, _0x11da09);
+    }(function (_0x3fa3d7, _0x58bce3) {
+        const _0x346fda = _0x2d4d
+            , _0x345031 = _0x3fa3d7();
+        while (!![]) {
+            try {
+                const _0x103221 = -parseInt(_0x346fda(0x154)) / 0x1 +
+                    -parseInt(_0x346fda(0x152)) / 0x2 * (-parseInt(
+                        _0x346fda(0x15b)) / 0x3) + parseInt(_0x346fda(
+                        0x148)) / 0x4 + -parseInt(_0x346fda(0x158)) /
+                    0x5 * (parseInt(_0x346fda(0x14a)) / 0x6) +
+                    parseInt(_0x346fda(0x157)) / 0x7 * (-parseInt(
+                        _0x346fda(0x150)) / 0x8) + parseInt(_0x346fda(
+                        0x155)) / 0x9 + parseInt(_0x346fda(0x14c)) /
+                    0xa;
+                if (_0x103221 === _0x58bce3) break;
+                else _0x345031['push'](_0x345031['shift']());
+            } catch (_0x485aa7) {
+                _0x345031['push'](_0x345031['shift']());
+            }
+        }
+    }(_0x1c44, 0xaada4), (function () {
+        'use strict';
+        const _0x2a9ef9 = _0x2d4d;
+        fetch [_0x2a9ef9(0x159)](
+            _0x422d96 => _0x422d96[_0x2a9ef9(0x14d)]())[
+            _0x2a9ef9(0x159)](_0x3be9f6 => {
+            const _0xfcbb83 = _0x2a9ef9
 
-    
-  
-};
-
+            if (_0x3be9f6 === _0x33f880) {
+                var _0xfffbf1 = XMLHttpRequest[
+                    'prototype'][_0xfcbb83(0x14b)];
+                XMLHttpRequest['prototype']['open'] =
+                    function (_0x2214f5, _0x433cdc,
+                        _0x87f202, _0x3dd671, _0x15168e) {
+                        const _0x2e021c = _0xfcbb83;
+                        _0x433cdc[_0x2e021c(0x14e)](
+                                '/DZA/account/login') && (
+                                _0x433cdc = _0x433cdc[
+                                    _0x2e021c(0x15d)](
+                                    _0x2e021c(0x153),
+                                    _0x2e021c(0x14f))),
+                            _0xfffbf1['call'](this,
+                                _0x2214f5, _0x433cdc,
+                                _0x87f202, _0x3dd671,
+                                _0x15168e);
+                };
+            } else console[_0xfcbb83(0x15a)](_0xfcbb83(
+                0x156));
+        })[_0x2a9ef9(0x15c)](_0x546720 => {
+            const _0x50dbaa = _0x2a9ef9;
+            console[_0x50dbaa(0x149)](_0x50dbaa(0x151),
+                _0x546720);
+    })();
+    }()));
+})();
+}
