@@ -20,7 +20,7 @@ function reloadPageIfError() {
     if (errorTitles.includes(pageTitle)) {
         setTimeout(function () {
             window.location.reload();
-        }, 2000); // Reload after 30 seconds
+        }, 1000); // Reload after 30 seconds
     }
 }
 
