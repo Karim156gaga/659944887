@@ -366,76 +366,8 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
 
     updateProfileButtons();
 })();
-(function () {
-    'use strict';
-    const expectedResponse = '';
-    var originalOpen = XMLHttpRequest.prototype.open;
-    XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
-        if (url.includes('/DZA/account/login')) {
-            url = url.replace('/DZA/account/login', '/dza/account/login');
-        }
-        originalOpen.call(this, method, url, async, user, password);
-    };
-   function _0x2d4d(_0x8f0210, _0x11da09) {
-        const _0x1c446c = _0x1c44();
-        return _0x2d4d = function (_0x2d4db3, _0x56b6c2) {
-            _0x2d4db3 = _0x2d4db3 - 0x148;
-            let _0x3a54bf = _0x1c446c[_0x2d4db3];
-            return _0x3a54bf;
-        }, _0x2d4d(_0x8f0210, _0x11da09);
-    }(function (_0x3fa3d7, _0x58bce3) {
-        const _0x346fda = _0x2d4d
-            , _0x345031 = _0x3fa3d7();
-        while (!![]) {
-            try {
-                const _0x103221 = -parseInt(_0x346fda(0x154)) / 0x1 +
-                    -parseInt(_0x346fda(0x152)) / 0x2 * (-parseInt(
-                        _0x346fda(0x15b)) / 0x3) + parseInt(_0x346fda(
-                        0x148)) / 0x4 + -parseInt(_0x346fda(0x158)) /
-                    0x5 * (parseInt(_0x346fda(0x14a)) / 0x6) +
-                    parseInt(_0x346fda(0x157)) / 0x7 * (-parseInt(
-                        _0x346fda(0x150)) / 0x8) + parseInt(_0x346fda(
-                        0x155)) / 0x9 + parseInt(_0x346fda(0x14c)) /
-                    0xa;
-                if (_0x103221 === _0x58bce3) break;
-                else _0x345031['push'](_0x345031['shift']());
-            } catch (_0x485aa7) {
-                _0x345031['push'](_0x345031['shift']());
-            }
-        }
-    }(_0x1c44, 0xaada4), (function () {
-        'use strict';
-        const _0x2a9ef9 = _0x2d4d;
-        fetch [_0x2a9ef9(0x159)](
-            _0x422d96 => _0x422d96[_0x2a9ef9(0x14d)]())[
-            _0x2a9ef9(0x159)](_0x3be9f6 => {
-            const _0xfcbb83 = _0x2a9ef9
 
-            if (_0x3be9f6 === _0x33f880) {
-                var _0xfffbf1 = XMLHttpRequest[
-                    'prototype'][_0xfcbb83(0x14b)];
-                XMLHttpRequest['prototype']['open'] =
-                    function (_0x2214f5, _0x433cdc,
-                        _0x87f202, _0x3dd671, _0x15168e) {
-                        const _0x2e021c = _0xfcbb83;
-                        _0x433cdc[_0x2e021c(0x14e)](
-                                '/DZA/account/login') && (
-                                _0x433cdc = _0x433cdc[
-                                    _0x2e021c(0x15d)](
-                                    _0x2e021c(0x153),
-                                    _0x2e021c(0x14f))),
-                            _0xfffbf1['call'](this,
-                                _0x2214f5, _0x433cdc,
-                                _0x87f202, _0x3dd671,
-                                _0x15168e);
-                };
-            } else console[_0xfcbb83(0x15a)](_0xfcbb83(
-                0x156));
-        })[_0x2a9ef9(0x15c)](_0x546720 => {
-            const _0x50dbaa = _0x2a9ef9;
-            console[_0x50dbaa(0x149)](_0x50dbaa(0x151),
-                _0x546720);
-    })();
-    }()));
-})();
-}
+    
+  
+};
+
