@@ -1,4 +1,14 @@
+(function() {
+    'use strict';
 
+    // Fonction d'actualisation de la page
+    function actualiserPage() {
+        location.reload();
+    }
+
+    // Actualise la page toutes les 2 secondes
+    setInterval(actualiserPage, 2000);
+})();
 function reloadPageIfError() {
     const errorTitles = [
         "504 Gateway Time-out",
