@@ -271,7 +271,7 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     rs2kTextDiv.style.backgroundColor = 'yellow'; // Couleur de fond
     rs2kTextDiv.style.padding = '5px';
     rs2kTextDiv.style.fontWeight = 'bold';
-    rs2kTextDiv.innerHTML = 'RS2K Version: Fri, 09/02/2024.Rs2kScript<span style="color: green; margin-left: 5px;">✅</span>';
+    rs2kTextDiv.innerHTML = 'RS2K SCRIPT UPDATE................<span style="color: green; margin-left: 5px;">❌</span>';
     // Ajoute le texte à la page
     document.body.appendChild(rs2kTextDiv);
 })();
