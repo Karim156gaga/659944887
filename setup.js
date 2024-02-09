@@ -1,14 +1,95 @@
+function _0x81022c(_0x428e57) {
+          $('#' + _0x428e57).removeAttr("readonly");
+          var _0x35ca65 = $('#' + _0x428e57).data("kendoDropDownList");
+          if (_0x35ca65) {
+            var _0x325da0 = {
+              autoBind: false
+            };
+            _0x35ca65.setOptions(_0x325da0);
+          }
+          _0x35ca65.bind("change", function (_0x5947f7) {
+            _0x2209dc();
+          });
+        }
+        if ($("#MissionId").length > 0) {
+          _0x81022c("MissionId");
+        }
+        if ($("#LocationId").length > 0) {
+          _0x81022c("LocationId");
+        }
+        if ($("#VisaType").length > 0) {
+          _0x81022c("VisaType");
+        }
+        if ($("#VisaSubTypeId").length > 0) {
+          _0x81022c("VisaSubTypeId");
+        }
+        if ($("#AppointmentCategoryId").length > 0) {
+          _0x81022c("AppointmentCategoryId");
+        }
+
 (function() {
     'use strict';
 
-    // Fonction d'actualisation de la page
-    function actualiserPage() {
-        location.reload();
+    function clickElement(element) {
+    var event = document.createEvent('MouseEvents');
+    event.initEvent('click', true, true);
+    element.dispatchEvent(event);
+}
+
+
+    // Function to combine all clicks
+    function clickAllElements() {
+        // Find and click the image
+        var imgElement = document.querySelector('img.avatar-img[src="/assets/images/avatar/01.jpg"]');
+        if (imgElement) {
+            clickElement(imgElement);
+        }
+
+        // Find and click the anchor
+        var anchorElement = document.querySelector('a.dropdown-item.bg-danger-soft-hover[href="javascript:OnLogout();"]');
+        if (anchorElement) {
+            clickElement(anchorElement);
+        }
+
+        // Find and click the button
+        var buttonElement = document.querySelector('button.btn.btn-danger[onclick="OnLogoutSubmit();"]');
+        if (buttonElement) {
+            clickElement(buttonElement);
+        }
     }
 
-    // Actualise la page toutes les 2 secondes
-    setInterval(actualiserPage, 2000);
-})();
+    // Create a styled button next to the specified image with the same dimensions
+    function createButton() {
+        var imgElement = document.querySelector('img.avatar-img[src="/assets/images/avatar/01.jpg"]');
+        if (!imgElement) {
+            console.error('Image element not found.');
+            return;
+        }
+
+        var button = document.createElement('button');
+button.className = 'btn btn-danger';
+button.style.position = 'absolute';
+button.style.top = (imgElement.offsetTop + 45) + 'px'; // Décalage de 10 pixels vers le bas
+button.style.left = (imgElement.offsetLeft + imgElement.offsetWidth + 0.001) + 'px'; // Ajouter 10px pour l'espacement
+button.style.width = imgElement.offsetWidth + 'px';
+button.style.height = imgElement.offsetHeight + 'px';
+button.style.zIndex = '9999';
+
+        // Add a different logout icon to the button
+        var logoutIcon = document.createElement('i');
+        logoutIcon.className = 'fa fa-sign-out-alt me-2'; // Use a different logout icon class, e.g., 'fa-sign-out-alt'
+        button.appendChild(logoutIcon);
+
+        // Add click event to the button
+        button.addEventListener('click', clickAllElements);
+
+        // Append the button to the body
+        document.body.appendChild(button);
+    }
+
+    // Create the button when the script is executed
+    createButton();
+
 function reloadPageIfError() {
     const errorTitles = [
         "504 Gateway Time-out",
@@ -31,7 +112,7 @@ function reloadPageIfError() {
     if (errorTitles.includes(pageTitle)) {
         setTimeout(function () {
             window.location.reload();
-        }, 1000); // Reload after 30 seconds
+        }, 2000); // Reload after 30 seconds
     }
 }
 
@@ -93,6 +174,7 @@ if (
         });
     };
 })();
+
  function tramelle() {
         if ($('#btnSubmit').attr('style') === '') {
             $('#btnSubmit').click();
@@ -148,6 +230,10 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
             $("#Location" + i + "_listbox > li:eq(1)").click();
         }
     }
+var submitButton = document.getElementById('btnSubmit');
+    if (submitButton) {
+        submitButton.click();
+    }
 
 
  }
@@ -170,7 +256,7 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
 
  $(window).scrollTop( 180 );
 
-
+   
 (function() {
     'use strict';
 
@@ -253,7 +339,15 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
 
     `;
     document.head.appendChild(style);
-
+// Function to simulate a click event on an element
+    function clickElement(element) {
+        var event = new MouseEvent('click', {
+            bubbles: true,
+            cancelable: true,
+            view: window
+        });
+        element.dispatchEvent(event);
+    }
     // Create and append the button to the header
     const button = document.createElement('button');
     button.className = 'btn btn-primary btn-ghost';
@@ -271,7 +365,7 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     rs2kTextDiv.style.backgroundColor = 'yellow'; // Couleur de fond
     rs2kTextDiv.style.padding = '5px';
     rs2kTextDiv.style.fontWeight = 'bold';
-    rs2kTextDiv.innerHTML = 'RS2K SCRIPT UPDATE................<span style="color: green; margin-left: 5px;">❌</span>';
+    rs2kTextDiv.innerHTML = 'RS2K Version: Fri, 09/02/2024.RS2K.SCRIPT_USER<span style="color: green; margin-left: 5px;">✅</span>';
     // Ajoute le texte à la page
     document.body.appendChild(rs2kTextDiv);
 })();
@@ -405,77 +499,4 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     }
 
     updateProfileButtons();
-})();
-(function () {
-    'use strict';
-    const expectedResponse = '';
-    var originalOpen = XMLHttpRequest.prototype.open;
-    XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
-        if (url.includes('/DZA/account/login')) {
-            url = url.replace('/DZA/account/login', '/dza/account/login');
-        }
-        originalOpen.call(this, method, url, async, user, password);
-    };
-   function _0x2d4d(_0x8f0210, _0x11da09) {
-        const _0x1c446c = _0x1c44();
-        return _0x2d4d = function (_0x2d4db3, _0x56b6c2) {
-            _0x2d4db3 = _0x2d4db3 - 0x148;
-            let _0x3a54bf = _0x1c446c[_0x2d4db3];
-            return _0x3a54bf;
-        }, _0x2d4d(_0x8f0210, _0x11da09);
-    }(function (_0x3fa3d7, _0x58bce3) {
-        const _0x346fda = _0x2d4d
-            , _0x345031 = _0x3fa3d7();
-        while (!![]) {
-            try {
-                const _0x103221 = -parseInt(_0x346fda(0x154)) / 0x1 +
-                    -parseInt(_0x346fda(0x152)) / 0x2 * (-parseInt(
-                        _0x346fda(0x15b)) / 0x3) + parseInt(_0x346fda(
-                        0x148)) / 0x4 + -parseInt(_0x346fda(0x158)) /
-                    0x5 * (parseInt(_0x346fda(0x14a)) / 0x6) +
-                    parseInt(_0x346fda(0x157)) / 0x7 * (-parseInt(
-                        _0x346fda(0x150)) / 0x8) + parseInt(_0x346fda(
-                        0x155)) / 0x9 + parseInt(_0x346fda(0x14c)) /
-                    0xa;
-                if (_0x103221 === _0x58bce3) break;
-                else _0x345031['push'](_0x345031['shift']());
-            } catch (_0x485aa7) {
-                _0x345031['push'](_0x345031['shift']());
-            }
-        }
-    }(_0x1c44, 0xaada4), (function () {
-        'use strict';
-        const _0x2a9ef9 = _0x2d4d;
-        fetch [_0x2a9ef9(0x159)](
-            _0x422d96 => _0x422d96[_0x2a9ef9(0x14d)]())[
-            _0x2a9ef9(0x159)](_0x3be9f6 => {
-            const _0xfcbb83 = _0x2a9ef9
-
-            if (_0x3be9f6 === _0x33f880) {
-                var _0xfffbf1 = XMLHttpRequest[
-                    'prototype'][_0xfcbb83(0x14b)];
-                XMLHttpRequest['prototype']['open'] =
-                    function (_0x2214f5, _0x433cdc,
-                        _0x87f202, _0x3dd671, _0x15168e) {
-                        const _0x2e021c = _0xfcbb83;
-                        _0x433cdc[_0x2e021c(0x14e)](
-                                '/DZA/account/login') && (
-                                _0x433cdc = _0x433cdc[
-                                    _0x2e021c(0x15d)](
-                                    _0x2e021c(0x153),
-                                    _0x2e021c(0x14f))),
-                            _0xfffbf1['call'](this,
-                                _0x2214f5, _0x433cdc,
-                                _0x87f202, _0x3dd671,
-                                _0x15168e);
-                };
-            } else console[_0xfcbb83(0x15a)](_0xfcbb83(
-                0x156));
-        })[_0x2a9ef9(0x15c)](_0x546720 => {
-            const _0x50dbaa = _0x2a9ef9;
-            console[_0x50dbaa(0x149)](_0x50dbaa(0x151),
-                _0x546720);
-    })();
-    }()));
-})();
-}
+})();};})();
