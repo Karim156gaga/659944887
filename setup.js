@@ -230,10 +230,7 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
             $("#Location" + i + "_listbox > li:eq(1)").click();
         }
     }
-var submitButton = document.getElementById('btnSubmit');
-    if (submitButton) {
-        submitButton.click();
-    }
+
 
 
  }
