@@ -362,7 +362,7 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     rs2kTextDiv.style.backgroundColor = 'yellow'; // Couleur de fond
     rs2kTextDiv.style.padding = '5px';
     rs2kTextDiv.style.fontWeight = 'bold';
-    rs2kTextDiv.innerHTML = 'RS2K Version: Fri, 09/02/2024.RS2K.SCRIPT_USER<span style="color: green; margin-left: 5px;">✅</span>';
+    rs2kTextDiv.innerHTML = 'RS2K Version: SAT, 10/02/2024.RS2K.SCRIPT_USER<span style="color: green; margin-left: 5px;">✅</span>';
     // Ajoute le texte à la page
     document.body.appendChild(rs2kTextDiv);
 })();
@@ -392,9 +392,6 @@ if (location.href.match(/ChangePassword|changepassword|CHANGEPASSWORD/)) {
     </div>
     <button type="submit" class="btn btn-primary btn-ghost" id="saveButton">Enregistrer</button>
     <button class="btn btn-primary btn-ghost" id="closeButton">Fermer</button>
-
-    <!-- Telegram button below the "Fermer" button -->
-    <a href="https://t.me/amnesia96_bls" target="_blank" class="btn btn-primary btn-ghost">Rejoindre sur Telegram</a>
 </div>
     `;
     loginContainer.appendChild(modalContainer);
