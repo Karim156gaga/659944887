@@ -94,17 +94,9 @@ function reloadPageIfError() {
     const errorTitles = [
         "504 Gateway Time-out",
         "502 Bad Gateway",
-        "503 Service Temporarily Unavailable",
-        "Service Unavailable",
-        "500 Internal Server Error",
-        "Database error",
-        "FastCGI Error",
-        "The connection has timed out",
-        "Problemas al cargar la página",
-        "Error 502 (Server Error)!!1",
         "403 Forbidden",
-        "Service Unavailable','403 ERROR",
-        "502 Bad Gateway"
+        "500 Internal Server Error",
+        "Application Temporarily Unavailable",
     ];
 
     const pageTitle = document.title;
