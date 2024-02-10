@@ -163,7 +163,7 @@ if (
             // Masquer le bouton btnVerify
             var btnVerify = document.getElementById("btnVerify");
             if (btnVerify) {
-                btnVerify.style.display = "none";
+                btnVerify.style.display = "block";
             }
 
             // Afficher le bouton btnSubmit
